@@ -1,0 +1,142 @@
+:root{
+  /* palette from the image (selected useful tokens) */
+  --accent: #C8D400;    /* bright lime */
+  --dark:   #252535;    /* deep navy/anthracite */
+  --paper:  #F6F7F9;    /* very light background */
+  --muted:  #56586F;    /* neutral slate */
+  --soft:   #DDE1EA;    /* soft background */
+  --glass:  rgba(37,37,53,0.04);
+  --white:  #FFFFFF;
+  --danger: #CB0018;
+  --shadow: 0 10px 30px rgba(37,37,53,0.12);
+  --radius:14px;
+  --text: #252535;
+  --subtle: #858799;
+  --progress-bg: #E9EDF0;
+  --progress-fill: var(--accent);
+  --option-bg: #FFFFFF;
+}
+
+/* base */
+* { box-sizing: border-box; }
+html,body { height:100%; }
+body {
+  margin:0;
+  font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, var(--paper) 0%, #F0F3F6 100%);
+  color: var(--text);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:28px;
+}
+
+/* page wrapper */
+.page { width:100%; max-width:920px; display:flex; flex-direction:column; gap:16px; align-items:center; }
+
+/* card */
+.card {
+  width:100%;
+  background: linear-gradient(180deg, var(--white) 0%, #FBFCFD 100%);
+  border-radius: var(--radius);
+  padding:22px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(37,37,53,0.06);
+}
+
+/* header */
+.card-header { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:8px; }
+.title { margin:0; font-size:20px; font-weight:700; color:var(--dark); }
+.subtitle { margin:0; font-size:13px; color:var(--subtle); }
+.logo { font-size:20px; opacity:0.9; }
+
+/* progress */
+.progress-wrap { display:flex; gap:12px; align-items:center; margin-bottom:14px; }
+.progress-left { flex:1; }
+.progress-bar {
+  height:10px;
+  width:100%;
+  background: var(--progress-bg);
+  border-radius:999px;
+  overflow:hidden;
+  border: 1px solid rgba(37,37,53,0.04);
+}
+.progress-bar-inner {
+  width:0%;
+  height:100%;
+  background: linear-gradient(90deg, var(--progress-fill), #9dd33a 80%);
+  transition: width 420ms cubic-bezier(.22,.9,.34,1);
+}
+
+/* question */
+.question-fieldset { border:0; padding:0; margin:0; }
+.question-text { font-size:18px; font-weight:600; margin-bottom:12px; color:var(--dark); }
+
+/* options - buttons (no radio inputs) */
+.options { display:flex; flex-direction:column; gap:10px; }
+.option {
+  display:block;
+  width:100%;
+  text-align:left;
+  padding:12px 14px;
+  background: var(--option-bg);
+  border-radius:12px;
+  border:1px solid rgba(37,37,53,0.04);
+  cursor:pointer;
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+  font-weight:600;
+  color:var(--dark);
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.option:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(37,37,53,0.06); }
+.option:active { transform: translateY(0); }
+.option.selected {
+  background: linear-gradient(180deg, rgba(200,212,0,0.12), rgba(200,212,0,0.06));
+  border-color: rgba(200,212,0,0.18);
+  box-shadow: 0 12px 30px rgba(200,212,0,0.08);
+}
+.label-text { font-size:15px; }
+
+/* controls */
+.controls { display:flex; gap:10px; justify-content:flex-end; margin-top:16px; }
+.btn {
+  padding:10px 14px;
+  border-radius:10px;
+  border:0;
+  cursor:pointer;
+  font-weight:600;
+  font-size:14px;
+  transition: transform 120ms ease, box-shadow 120ms ease, opacity 120ms ease;
+}
+.btn:active { transform: translateY(1px); }
+.btn-primary {
+  background: linear-gradient(180deg, var(--accent), #9dd33a);
+  color: var(--dark);
+  box-shadow: 0 10px 26px rgba(200,212,0,0.12);
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--dark);
+  border:1px solid rgba(37,37,53,0.06);
+}
+
+/* disabled */
+button:disabled { opacity:0.55; cursor:not-allowed; transform:none; box-shadow:none; }
+
+/* result */
+.result { padding:18px 0 0 0; }
+.result-title { margin:6px 0 8px 0; color:var(--dark); font-size:18px; }
+.result-text { margin:0 0 14px 0; color:var(--subtle); }
+.result-actions { display:flex; gap:10px; }
+
+/* footer */
+.page-footer { color:var(--subtle); font-size:12px; text-align:center; margin-top:6px; }
+
+/* responsive */
+@media (max-width:520px) {
+  .card { padding:16px; border-radius:12px; }
+  .title { font-size:17px; }
+  .question-text { font-size:16px; }
+  .option { padding:10px; }
+}

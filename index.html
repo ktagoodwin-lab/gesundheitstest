@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gesundheits-Quiz</title>
+
+  <!-- Open Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <meta name="theme-color" content="#252535" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <div class="card" role="application" aria-labelledby="appTitle">
+      <header class="card-header">
+        <div>
+          <h1 id="appTitle" class="title">Gesundheits‑Quiz</h1>
+          <p class="subtitle">Kurzes verzweigtes Quiz — dauert ca. 1 Minute</p>
+        </div>
+        <div class="logo" aria-hidden="true">🩺</div>
+      </header>
+
+      <section id="quiz" class="card-body" aria-live="polite">
+        <div id="progressWrap" class="progress-wrap" aria-hidden="true">
+          <div class="progress-left">
+            <div id="progressBar" class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+              <div id="progressBarInner" class="progress-bar-inner"></div>
+            </div>
+          </div>
+          <!-- percentage removed as requested -->
+        </div>
+
+        <form id="questionForm" class="question-form" autocomplete="off" onsubmit="return false;">
+          <fieldset id="questionFieldset" class="question-fieldset">
+            <legend id="questionText" class="question-text"></legend>
+            <div id="options" class="options" role="list"></div>
+          </fieldset>
+
+          <div class="controls">
+            <button type="button" id="backBtn" class="btn btn-ghost" aria-label="Zurück">Zurück</button>
+            <button type="button" id="nextBtn" class="btn btn-primary" disabled aria-label="Nächste">Nächste</button>
+          </div>
+        </form>
+      </section>
+
+      <section id="result" class="result hidden" aria-hidden="true">
+        <h2 id="resultTitle" class="result-title"></h2>
+        <p id="resultText" class="result-text"></p>
+        <div class="result-actions">
+          <button id="restartBtn" class="btn btn-primary">Quiz neu starten</button>
+        </div>
+      </section>
+    </div>
+
+    <footer class="page-footer">
+      <small>Deine Antworten bleiben nur lokal in deinem Browser.</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
