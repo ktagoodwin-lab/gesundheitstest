@@ -96,7 +96,7 @@ const questions = {
   },
   stressed: {
     id: 'stressed',
-    text: 'Bist du oft gestresst, unkonzentriert oder hast ein schlechtes Zeitmanagement?',
+    text: 'Sind Sie oft gestresst, unkonzentriert oder haben ein schlechtes Zeitmanagement?',
     options: [
       { value: 'ja', label: 'Ja' },
       { value: 'nein', label: 'Nein' }
