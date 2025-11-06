@@ -5,7 +5,7 @@
 const questions = {
   sleepHours: {
     id: 'sleepHours',
-    text: 'Wie viele Stunden schläfst du jeden Tag?',
+    text: 'Wie viele Stunden schlafen Sie jeden Tag?',
     options: [
       { value: '<4', label: '< 4' },
       { value: '4-8', label: '4–8' },
@@ -14,7 +14,7 @@ const questions = {
   },
   tvSleep: {
     id: 'tvSleep',
-    text: 'Schläfst du beim Fernseher?',
+    text: 'Schlafen Sie beim Fernsehen?',
     options: [
       { value: 'ja', label: 'Ja' },
       { value: 'nein', label: 'Nein' }
@@ -22,7 +22,7 @@ const questions = {
   },
   phoneBeforeSleep: {
     id: 'phoneBeforeSleep',
-    text: 'Benutzt du dein Handy vor dem Schlafen?',
+    text: 'Benutzen Sie Ihr Handy vor dem Schlafen?',
     options: [
       { value: 'ja', label: 'Ja' },
       { value: 'nein', label: 'Nein' }
@@ -30,7 +30,7 @@ const questions = {
   },
   nightWake: {
     id: 'nightWake',
-    text: 'Wie oft wirst du in der Nacht wach?',
+    text: 'Wie oft werden Sie in der Nacht wach?',
     options: [
       { value: 'oft', label: 'Oft' },
       { value: 'selten', label: 'Selten' },
@@ -39,7 +39,7 @@ const questions = {
   },
   coffeeCups: {
     id: 'coffeeCups',
-    text: 'Wie viele Tassen Kaffee trinkst du täglich?',
+    text: 'Wie viele Tassen Kaffee trinken Sie täglich?',
     options: [
       { value: 'mehr als 3', label: 'Mehr als 3' },
       { value: '1-3', label: '1–3' },
@@ -48,7 +48,7 @@ const questions = {
   },
   energyDrinks: {
     id: 'energyDrinks',
-    text: 'Trinkst du oft Energydrinks?',
+    text: 'Trinken Sie oft Energydrinks?',
     options: [
       { value: 'ja', label: 'Ja' },
       { value: 'nein', label: 'Nein' }
@@ -56,7 +56,7 @@ const questions = {
   },
   workMuch: {
     id: 'workMuch',
-    text: 'Arbeitest du viel?',
+    text: 'Arbeiten Sie viel?',
     options: [
       { value: 'ja', label: 'Ja' },
       { value: 'nein', label: 'Nein' }
@@ -64,7 +64,7 @@ const questions = {
   },
   sports: {
     id: 'sports',
-    text: 'Treibst du regelmäßig Sport?',
+    text: 'Treiben Sie regelmäßig Sport?',
     options: [
       { value: 'ja', label: 'Ja' },
       { value: 'nein', label: 'Nein' }
@@ -72,7 +72,7 @@ const questions = {
   },
   healthyDiet: {
     id: 'healthyDiet',
-    text: 'Achtest du auf gesunde Ernährung?',
+    text: 'Achten Sie auf gesunde Ernährung?',
     options: [
       { value: 'ja', label: 'Ja' },
       { value: 'nein', label: 'Nein' }
@@ -80,7 +80,7 @@ const questions = {
   },
   nicotine: {
     id: 'nicotine',
-    text: 'Rauchst du oder benutzt du Nikotinprodukte?',
+    text: 'Rauchen Sie oder benutzen Sie Nikotinprodukte?',
     options: [
       { value: 'ja', label: 'Ja' },
       { value: 'nein', label: 'Nein' }
@@ -88,7 +88,7 @@ const questions = {
   },
   alcohol: {
     id: 'alcohol',
-    text: 'Trinkst du mehr als dreimal pro Woche Alkohol?',
+    text: 'Trinken Sie mehr als dreimal pro Woche Alkohol?',
     options: [
       { value: 'ja', label: 'Ja' },
       { value: 'nein', label: 'Nein' }
@@ -106,19 +106,19 @@ const questions = {
 
 const results = {
   excellent: {
-    title: 'Du bist ein Vorbild!',
+    title: 'Herzlichen Glückwunsch!',
     text:
-      'Achte darauf, dass das auch in Zukunft so bleibt. Du scheinst gesunde Gewohnheiten zu haben — weiter so!'
+      'Sie sind ein Vorbild für andere! Achten Sie darauf, dass das auch in Zukunft so bleibt. So werden Sie sich an einem langen und gesunden Leben erfreuen können.'
   },
   active: {
-    title: 'Regelmäßige Bewegung ist super!',
+    title: 'Sie sind schon auf einem guten Weg! ',
     text:
-      'Regelmäßige Bewegung und Pausen tun dir gut. Spaziergänge, Zeit mit Freunden und Erholung helfen, schlechte Angewohnheiten zu ersetzen.'
-  },
+      'Regelmäßige Bewegung und Pausen tun Ihnen gut. Spazieren gehen, mit Freunden kochen und erholsame Zeiten werden Ihnen helfen, bestehende schlechte Angewohnheiten durch gute zu ersetzen.'},
+  
   concerning: {
-    title: 'Achtung: Gewohnheiten können ungesund sein',
+    title: 'Sie sollten schnell handeln!',
     text:
-      'Deine Gewohnheiten könnten mit der Zeit gesundheitsgefährdend werden. Achte mehr auf deinen Körper und gönn dir öfter eine Pause. Kleine Änderungen können viel bewirken.'
+      'Ihre schlechten Angewohnheiten können mit der Zeit gesundheitsgefährdend werden. Achten Sie mehr auf Ihren Körper, ernähren Sie sich gesünder und gönnen Sie sich ab und zu eine Pause!'
   }
 };
 
