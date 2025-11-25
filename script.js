@@ -279,9 +279,13 @@ function computeResultKey() {
 }
 
 function showResult(key) {
-  quizDiv.classList.add('hidden');
+  // Hide quiz section completely
+  quizDiv.style.display = 'none';
+  
+  // Show result section
   resultDiv.classList.remove('hidden');
   resultDiv.setAttribute('aria-hidden', 'false');
+  
   const r = results[key] || results.active;
   document.getElementById('resultTitle').textContent = r.title;
   document.getElementById('resultText').textContent = r.text;
@@ -311,9 +315,13 @@ document.getElementById('restartBtn').addEventListener('click', () => {
   state.currentId = 'sleepHours';
   state.history = [];
   state.answers = {};
+  
+  // Hide result and show quiz section
   resultDiv.classList.add('hidden');
-  quizDiv.classList.remove('hidden');
   resultDiv.setAttribute('aria-hidden', 'true');
+  quizDiv.style.display = '';
+  quizDiv.classList.remove('hidden');
+  
   renderQuestion();
 });
 
