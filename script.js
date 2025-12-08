@@ -118,7 +118,7 @@ const results = {
   concerning: {
     title: 'Sie sollten schnell handeln!',
     text:
-      'Ihre schlechten Angewohnheiten können mit der Zeit gesundheitsgefährdend werden. Achten Sie mehr auf Ihren Körper, ernähren Sie sich gesünder und gönnen Sie sich ab und zu eine Pause!'
+      'Ihre schlechten Angewohnheiten können mit der Zeit gesundheitsgefährdend werden. Achten Sie mehr auf Ihren Körper, ernähren Sie sich gesund  und gönnen Sie sich ab und zu eine Pause!'
   }
 };
 
